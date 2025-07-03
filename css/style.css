@@ -1,0 +1,163 @@
+/* 重置默認樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 導航欄樣式 */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* 主要內容區域 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    position: relative;
+    display: inline-block;
+    padding: 24px 48px;
+    font-size: 3rem;
+    font-weight: bold;
+    background: #fff;
+    margin: 40px auto 0 auto;
+    z-index: 1;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+    color: transparent;
+    background: linear-gradient(270deg, #ff0000, #ff9900, #ffee00, #33ff00, #00ffee, #0066ff, #cc00ff, #ff0000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow-text 3s linear infinite;
+}
+
+@keyframes rainbow-text {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.page-section {
+    display: none;
+}
+.page-section.active {
+    display: block;
+}
+
+#home.page-section.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0.8);
+    border-radius: 8px;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scaleY(1);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f0;
+} 
